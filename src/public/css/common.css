@@ -1,0 +1,91 @@
+.header{
+    max-width: 1540px;
+    height: 80px;
+    background-color: #000000;
+}
+
+.header__inner{
+    padding: 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo{
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+.header_search {
+    margin-left: 50px;
+}
+
+.search_logo{
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    color: #000000;
+    margin: 15px 30px;
+    padding-left: 30px;
+    border: none;
+    font-size: 24px;
+}
+
+.header_button{
+    display: flex;
+    padding: 15px 0px;
+    font-size: 24px;
+    margin-right: 40px;
+}
+
+.button_logout, .button_mypage{
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+.button_sell{
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-left: 40px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 850px) {
+.header__inner {
+    padding: 0px 20px;
+}
+
+.header__logo {
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.header_search {
+    margin-left: 30px;
+}
+
+.search_logo {
+    width: 250px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.header_button {
+    font-size: 15px;
+    margin-right: 0px;
+}
+
+.button_logout,
+.button_mypage, .button_sell {
+    margin-left: 10px;
+    padding-top: 15px;
+}
+}
