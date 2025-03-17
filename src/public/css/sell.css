@@ -1,0 +1,15 @@
+.sell {
+    max-width: 1540px;
+    height: 2000px;
+}
+
+.sell_header {
+    width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.sell_header-logo {
+    font-size: 36px;
+}
