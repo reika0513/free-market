@@ -61,6 +61,28 @@
     height: 45px;
 }
 
-.class{
-    background-color: #5F5F5F;
+.categories_option{
+    background-color: #636769;
+    border: solid 1.5px #B1B1B1;
+    color: #EAEAEA;
+    font-size: 14px;
+    border-radius: 5px
+}
+
+.form_group-textarea_input{
+    resize: none;
+    width: 680px;
+    height: 125px;
+}
+
+.form_button-submit {
+    width: 680px;
+    height: 59px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 120px;
+    background-color: #FF5555;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
 }
