@@ -14,7 +14,7 @@
         <div class="form_frame">
             <div class="form_frame-first">
                 <div class="from_group">
-                    <p class="form_title">商品画像</p>
+                    <h3 class="form_title">商品画像</h3>
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-image">
@@ -29,7 +29,7 @@
             <div class="form_frame-second">
                 <h2 class="form_frame_header">商品の詳細</h2>
                 <div class="form_group">
-                    <p class="form_title">カテゴリー</p>
+                    <h3 class="form_title">カテゴリー</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
                         <!-- カテゴリーボタン -->
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="form_group">
-                    <p class="form_title">商品の状態</p>
+                    <h3 class="form_title">商品の状態</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
                             <select class="form_group-text_categories" name="categories">
@@ -65,7 +65,7 @@
             <div class="form_frame-second">
                 <h2 class="form_frame_header">商品名と説明</h2>
                 <div class="form_group">
-                    <p class="form_title">商品名</p>
+                    <h3 class="form_title">商品名</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
                             <input class="form_group-text_input" name="name" type="text">
@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <div class="form_group">
-                    <p class="form_title">ブランド名</p>
+                    <h3 class="form_title">ブランド名</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
                             <input class="form_group-text_input" name="brand_name" type="text">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
                 <div class="form_group">
-                    <p class="form_title">商品の説明</p>
+                    <h3 class="form_title">商品の説明</h3>
                     <div class="form_group-content">
                         <div class="form_group-textarea">
                             <textarea class="form_group-textarea_input" name="content" id=""></textarea>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="form_group">
-                    <p class="form_title">商品価格</p>
+                    <h3 class="form_title">商品価格</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
                             <span>￥</span>

@@ -7,9 +7,60 @@
     width: 680px;
     margin: 0 auto;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .sell_header-logo {
     font-size: 36px;
+}
+
+.form {
+    width: 680px;
+    margin: 30px auto;
+}
+
+.form_title{
+    margin-bottom: 0px;
+    font-size: 24px;
+}
+
+.form_frame_header{
+    font-size: 30px;
+    color: #5F5F5F;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #5F5F5F;
+}
+
+.form_group{
+    margin-top: 35px;
+}
+
+.form_group-image{
+    width: 680px;
+    height: 150px;
+    border: dashed 1px #5F5F5F;
+    border-radius: 4px;
+}
+
+.form_group-image_input{
+    font-size: 16px;
+    margin: 60px 180px;
+}
+
+.form_frame-second{
+    margin-top: 50px;
+}
+
+.form_group-text_input{
+    width: 680px;
+    height: 45px;
+}
+
+.form_group-text_categories{
+    width: 680px;
+    height: 45px;
+}
+
+.class{
+    background-color: #5F5F5F;
 }

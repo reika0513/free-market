@@ -1,25 +1,68 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoachTech Free-market</title>
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
-</head>
+@extends('layouts.app_auth')
 
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <a class="header__logo" href="/">
-                COACHTECH
-            </a>
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/auth/register.css') }}">
+@endsection
+
+@section('content')
+<div class="register">
+    <div class="register_header">
+        <h1 class="register_header-logo">会員登録</h1>
+    </div>
+    <form class="form" action="">
+        @csrf
+        <div class="form_frame">
+            <div class="form_group">
+                <p class="form_title">ユーザー名</p>
+                <div class="form_group-content">
+                    <div class="form_group-text">
+                        <input class="form_group-text_input" name="name" type="text">
+                    </div>
+                    <div class="form_error">
+                        <!-- エラー -->
+                    </div>
+                </div>
+            </div>
+            <div class="form_group">
+                <p class="form_title">メールアドレス</p>
+                <div class="form_group-content">
+                    <div class="form_group-text">
+                        <input class="form_group-text_input" name="email" type="text">
+                    </div>
+                    <div class="form_error">
+                        <!-- エラー -->
+                    </div>
+                </div>
+            </div>
+            <div class="form_group">
+                <p class="form_title">パスワード</p>
+                <div class="form_group-content">
+                    <div class="form_group-text">
+                        <input class="form_group-text_input" name="password" type="text">
+                    </div>
+                    <div class="form_error">
+                        <!-- エラー -->
+                    </div>
+                </div>
+            </div>
+            <div class="form_group">
+                <p class="form_title">確認用パスワード</p>
+                <div class="form_group-content">
+                    <div class="form_group-text">
+                        <input class="form_group-text_input" name="confirm_password" type="text">
+                    </div>
+                    <div class="form_error">
+                        <!-- エラー -->
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-
-    <main>
-        
-    </main>
-</body>
+        <div class="form_button">
+            <button class="form_button-submit" type="submit">登録する</button>
+        </div>
+    </form>
+    <div class="login">
+        <a class="login_button" href="">ログインはこちら</a>
+    </div>
+</div>
+@endsection
