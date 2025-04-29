@@ -15,3 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ItemController::class, 'index']);
+Route::get('/mypage', [ItemController::class, 'mypage']);
+Route::get('/add', [ItemController::class, 'add']);
+Route::post('/sell', [ItemController::class, 'sell']);
