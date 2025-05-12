@@ -26,4 +26,8 @@ class ItemController extends Controller
         Myitem::create($myitems);;
         return redirect('/mypage');
     }
+
+    public function edit(){
+        return view('profile_edit');
+    }
 }
