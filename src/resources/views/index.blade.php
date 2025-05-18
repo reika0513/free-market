@@ -10,14 +10,13 @@
         <a class="header_list" href="">マイリスト</a>
     </div>
     <div class="main_items">
-        <!-- foreach() -->
-        <a class="items_link" href="">
-            <div class="items">
-                <img class="items_image" src="" alt="画像なし"><!-- src=image value -->
-                <p class="items_name">商品名<!-- name value --></p>
-                <p class="item_id" type="hidden"><!-- id value --></p>
-            </div>
-        </a>
-        <!-- endforeach -->
+        @foreach ($items as $item)
+        <div class="items">
+            <a class="items_link" href="">
+            <img class="items_image" src="{{ asset($item->image) }}" alt="画像なし">
+            <p class="items_name">{{$item->name}}</p>
+            </a>
+        </div>
+        @endforeach
     </div>
 @endsection

@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Myitem;
+use App\Models\Item;
 
 class ItemController extends Controller
 {
     public function index(){
-        return view('index');
+        $items = Item::all();
+        return view('index', compact('items'));
     }
 
     public function mypage(){
@@ -23,11 +25,16 @@ class ItemController extends Controller
     public function sell(Request $request)
     {
         $myitems = $request->only('image','name','brand_name','quality','content','price');
-        Myitem::create($myitems);;
+        Myitem::create($myitems);
         return redirect('/mypage');
     }
 
     public function edit(){
         return view('profile_edit');
+    }
+
+    public function getDetail(){
+        $myitems = Myitem::all()->find($myitem->id);
+        return view('detail', compact('myitems'));
     }
 }

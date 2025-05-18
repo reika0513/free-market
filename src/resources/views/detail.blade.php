@@ -12,16 +12,16 @@
         </div>
         <div class="detail_right">
             <div class="detail_purchase_form">
-                <form class="purchase_form" action="">
+                <form class="purchase_form" action="" method="">
                     @csrf
                     <div class="purchase_head">
                         <div class="head_title">
-                            <h1 class="head_title_name">商品名がここに入る</h1>
-                            <p class="head_title_brand-name">ブランド名</p>
+                            <h1 class="head_title_name">{{$item->name}}</h1>
+                            <p class="head_title_brand-name">{{$item->brand_name}}</p>
                         </div>
                         <div class="head_content"></div>
                         <p class="head_content_price">
-                            <span>￥47,000</span>
+                            <span>￥{{$item->price}}</span>
                             <span>(税込)</span></p>
                         <p class="star">星1</p>
                         <p class="comment">コメント2</p>
@@ -32,12 +32,7 @@
                     <div class="purchase_content">
                         <h3 class="content_title">商品説明</h3>
                         <div class="content_body">
-                            <p class="content_body-inner">
-                                <span>カラー：グレー</span>
-                                <span>新品</span>
-                                <span>商品の状態は両行です。傷もありません。</span>
-                                <span>購入後、即発送いたします。</span>
-                            </p>
+                            <p class="content_body-inner">{{$item->content}}</p>
                         </div>
                     </div>
                     <div class="purchase_categories">
@@ -49,7 +44,7 @@
                             </div>
                             <div class="categories_body-quality">
                                 <p class="content_title">商品の状態</p>
-                                <p class="content_detail">良好</p>
+                                <p class="content_detail">{{$item->quality}}</p>
                             </div>
                         </div>
                     </div>

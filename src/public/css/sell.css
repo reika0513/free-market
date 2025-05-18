@@ -86,3 +86,16 @@
     border: none;
     border-radius: 5px;
 }
+
+.form_group-text{
+    display: flex;
+}
+
+.form_group-text_input-price{
+    width: 660px;
+    height: 45px;
+}
+
+.price_span{
+    padding: 8px 5px;
+}
