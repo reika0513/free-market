@@ -14,18 +14,15 @@
             <a class="profile_link" href="http://localhost/mypage_edit">プロフィールを編集</a>
     </div>
     <div class="main_header">
-        <a class="header_recommend" href="/">出品した商品</a>
+        <a class="header_recommend" href="/mypage">出品した商品</a>
         <a class="header_list" href="">購入した商品</a>
     </div>
     <div class="main_items">
         @foreach ($myitems as $myitem)
-        <a class="items_link" href=""><!--  href="/products/detail/{{$myitems->id}}"  -->
-            <div class="items">
-                <img class="items_image" src="{{ asset($myitems->image)}}" alt="画像なし">
-                <p class="items_name">{{ asset($myitems->name) }}</p>
-                <p class="item_id" type="hidden"></p>
-            </div>
-        </a>
+        <div class="items">
+            <img class="items_image" src="{{ asset($myitem->image) }}" alt="画像なし">
+            <p class="items_name">{{$myitem->name}}</p>
+        </div>
         @endforeach
     </div>
 </div>

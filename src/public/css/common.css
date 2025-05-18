@@ -90,3 +90,7 @@
     padding-top: 15px;
 }
 }
+
+.form_error{
+    color: red;
+}

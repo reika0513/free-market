@@ -16,7 +16,7 @@ class ItemsTableSeeder extends Seeder
     {
         $param = [
         'name' => '腕時計',
-        'image' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Armani+Mens+Clock.jpg',
+        'image' => '/home/kinugasa0513/coachtech/laravel/free-market/src/storage/Clock.jpg',
         'quality' => '良好',
         'content' => 'スタイリッシュなデザインのメンズ腕時計',
         'price' => '15000'

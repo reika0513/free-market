@@ -9,7 +9,7 @@
     <div class="sell_header">
         <h1 class="sell_header-logo">商品の出品</h1>
     </div>
-    <form class="form" action="/sell" method="post">
+    <form class="form" action="/sell" method="post" enctype='multipart/form-data'>
         @csrf
         <div class="form_frame">
             <div class="form_frame-first">
@@ -20,7 +20,9 @@
                             <input class="form_group-image_input" type="file" name="image" accept="image/png, image/jpeg">
                         </div>
                         <div class="form_error">
-                           <!-- エラー -->
+                           @error('image')
+                            {{ $message }}
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -56,7 +58,9 @@
                             </select>
                         </div>
                         <div class="form_error">
-                            <!-- エラー -->
+                            @error('quality')
+                            {{ $message }}
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -71,7 +75,9 @@
                             <input class="form_group-text_input" name="name" type="text">
                         </div>
                         <div class="form_error">
-                            <!-- エラー -->
+                            @error('name')
+                            {{ $message }}
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -82,7 +88,9 @@
                             <input class="form_group-text_input" name="brand_name" type="text">
                         </div>
                         <div class="form_error">
-                            <!-- エラー -->
+                            @error('brand_name')
+                            {{ $message }}
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -93,7 +101,9 @@
                             <textarea class="form_group-textarea_input" name="content" id="" cols="95" rows="8"></textarea>
                         </div>
                         <div class="form_error">
-                            <!-- エラー -->
+                            @error('content')
+                            {{ $message }}
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -105,7 +115,9 @@
                             <input class="form_group-text_input-price" name="price" type="text">
                         </div>
                         <div class="form_error">
-                            <!-- エラー -->
+                            @error('price')
+                            {{ $message }}
+                            @enderror
                         </div>
                     </div>
                 </div>

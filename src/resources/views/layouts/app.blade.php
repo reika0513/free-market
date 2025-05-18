@@ -20,8 +20,8 @@
             </div>
             <div class="header_button">
                 <a class="button_logout" href="">ログアウト</a>
-                <a class="button_mypage" href="">マイページ</a>
-                <a class="button_sell" href="">出品</a>
+                <a class="button_mypage" href="http://localhost/mypage">マイページ</a>
+                <a class="button_sell" href="http://localhost/add">出品</a>
             </div>
         </div>
     </header>

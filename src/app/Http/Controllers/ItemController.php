@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Myitem;
 use App\Models\Item;
+use App\Http\Requests\MyitemRequest;
 
 class ItemController extends Controller
 {
@@ -22,10 +23,12 @@ class ItemController extends Controller
         return view('sell');
     }
 
-    public function sell(Request $request)
+    public function sell(MyitemRequest $request)
     {
-        $myitems = $request->only('image','name','brand_name','quality','content','price');
+        $myitems = $request->only('image', 'name','brand_name','quality','content','price');
         Myitem::create($myitems);
+        $image_path = $request->file('image')->store('public/avatar/');
+        $myitems->image = basename($image_path);
         return redirect('/mypage');
     }
 
