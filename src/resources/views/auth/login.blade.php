@@ -9,14 +9,14 @@
     <div class="login_header">
         <h1 class="login_header-logo">ログイン</h1>
     </div>
-    <form class="form" action="">
+    <form class="form" action="/login" method="post">
         @csrf
         <div class="form_frame">
             <div class="form_group">
                 <p class="form_title">メールアドレス</p>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_input" name="email" type="text">
+                        <input class="form_group-text_input" name="email" type="email" value="{{ old('email')}}">
                     </div>
                     <div class="form_error">
                         <!-- エラー -->
@@ -40,7 +40,7 @@
         </div>
     </form>
     <div class="login">
-        <a class="login_button" href="">会員登録はこちら</a>
+        <a class="login_button" href="/register">会員登録はこちら</a>
     </div>
 </div>
 @endsection

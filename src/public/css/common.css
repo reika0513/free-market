@@ -40,7 +40,7 @@
     margin-right: 40px;
 }
 
-.button_logout, .button_mypage{
+.button_login, .button_logout, .button_mypage{
     text-decoration: none;
     color: #ffffff;
     margin-left: 40px;
