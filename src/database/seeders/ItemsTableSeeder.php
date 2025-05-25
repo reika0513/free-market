@@ -16,7 +16,7 @@ class ItemsTableSeeder extends Seeder
     {
         $param = [
         'name' => '腕時計',
-        'image' => '/home/kinugasa0513/coachtech/laravel/free-market/src/storage/Clock.jpg',
+        'image' => 'https://coachtech-matter.s3.ap-northeast-1.amazonaws.com/image/Armani+Mens+Clock.jpg',
         'quality' => '良好',
         'content' => 'スタイリッシュなデザインのメンズ腕時計',
         'price' => '15000'
@@ -110,16 +110,6 @@ class ItemsTableSeeder extends Seeder
         'quality' => '目立った傷や汚れなし',
         'content' => '便利なメイクアップセット',
         'price' => '2500'
-
-       ];
-        DB::table('items')->insert($param);
-
-         $param = [
-        'name' => '狼の絵',
-        'image' => 'wlfe.png',
-        'quality' => '目立った傷や汚れなし',
-        'content' => 'きれいな狼が描かれている絵画',
-        'price' => '5500'
 
        ];
         DB::table('items')->insert($param);

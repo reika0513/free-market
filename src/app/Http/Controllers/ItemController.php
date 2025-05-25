@@ -26,9 +26,10 @@ class ItemController extends Controller
     public function sell(MyitemRequest $request)
     {
         $myitems = $request->only('image', 'name','brand_name','quality','content','price');
-        Myitem::create($myitems);
+        $myitem = Myitem::create($myitems);
         $image_path = $request->file('image')->store('public/avatar/');
-        $myitems->image = basename($image_path);
+        var_dump($image_path);
+        $myitem->image = basename($image_path);
         return redirect('/mypage');
     }
 
