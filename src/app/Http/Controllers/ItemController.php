@@ -41,6 +41,10 @@ class ItemController extends Controller
         $myitems = Myitem::all()->find($myitem->id);
         return view('detail', compact('myitems'));
     }
+    
 
+    public function profile(){
+        return view('profile');
+    }
 
 }
