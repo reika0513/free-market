@@ -40,11 +40,22 @@
     margin-right: 40px;
 }
 
-.button_login, .button_logout, .button_mypage{
+.button_login, .button_mypage{
     text-decoration: none;
     color: #ffffff;
-    margin-left: 40px;
+    margin-left: 25px;
     padding-top: 10px;
+}
+
+.button_logout{
+    height: 50px;
+    width: 130px;
+    margin-left: 20px;
+    padding-top: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 23px;
+    border: none;
 }
 
 .button_sell{

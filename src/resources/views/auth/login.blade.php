@@ -19,7 +19,9 @@
                         <input class="form_group-text_input" name="email" type="email" value="{{ old('email')}}">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('email')
+                            {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -30,7 +32,9 @@
                         <input class="form_group-text_input" name="password" type="text">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('password')
+                            {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>

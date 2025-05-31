@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MyitemRequest extends FormRequest
+class ExhibitionRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,8 +27,9 @@ class MyitemRequest extends FormRequest
         'name' => ['required'],
         'image' => ['required'],
         'quality' => ['required'],
-        'content' => ['max:120'],
-        'price' => ['required', 'integer', 'digits_between:0,10000'],
+        'categories' => ['required'],
+        'content' => ['required', 'max:255'],
+        'price' => ['required', 'integer', 'min:0'],
         ];
     }
 
@@ -38,10 +39,13 @@ class MyitemRequest extends FormRequest
             'image.required' => '画像を選択してください',
             'image.image' => '「.png」または「.jpeg」形式でアップロードしてください',
             'quality.required' => '商品状態を選択してください',
+            'categories.required' => '商品カテゴリーを選択してください',
+            'content.required' => '商品説明を入力してください',
             'content.max' => '120文字以内で入力してください',
             'price.required' => '値段を入力してください',
             'price.integer' => '数値で入力してください',
-            'price.digits_between' => '0~10000円以内で入力してください',
+            'price.digits_between' => '0円以上で入力してください',
         ];
     }
 }
+

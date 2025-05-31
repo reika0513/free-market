@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Myitem;
 use App\Models\Item;
-use App\Http\Requests\MyitemRequest;
+use App\Http\Requests\ExhibitionRequest;
 
 class ItemController extends Controller
 {
@@ -23,7 +23,7 @@ class ItemController extends Controller
         return view('sell');
     }
 
-    public function sell(MyitemRequest $request)
+    public function sell(ExhibitionRequest $request)
     {
         $myitems = $request->only('image', 'name','brand_name','quality','content','price');
         $myitem = Myitem::create($myitems);

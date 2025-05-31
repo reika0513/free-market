@@ -14,10 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [ItemController::class, 'index']);
+
+Route::middleware('auth')->group(function () {
 Route::get('/mypage', [ItemController::class, 'mypage']);
 Route::get('/profile_edit',[ItemController::class,'edit']);
 Route::get('/add', [ItemController::class, 'add']);
+});
+
 Route::post('/sell', [ItemController::class, 'sell']);
 Route::get('/item/{{$myitem->id}}', [ItemController::class, 'getDetail']);
 

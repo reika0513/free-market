@@ -19,10 +19,19 @@
                 <input class="search_logo" type="text" placeholder="なにをお探しですか？">
             </div>
             <div class="header_button">
-                <a class="button_logout" href="">ログアウト</a>
+                @auth
+                <form class="logout_form" action="/logout" method="post">
+                    @csrf
+                    <button class="button_logout" href="">ログアウト</button>
+                </form>
+                @endauth
+                @guest
+                <a class="button_login" href="http://localhost/login">ログイン</a>
+                @endguest
                 <a class="button_mypage" href="http://localhost/mypage">マイページ</a>
                 <a class="button_sell" href="http://localhost/add">出品</a>
             </div>
+            
         </div>
     </header>
     
