@@ -9,7 +9,7 @@
     <div class="profile_head">
         <div class="profile_user">
             <img src="" alt="画像なし">
-            <h1 class="profile_user-name">ユーザー名</h1>
+            <h1 class="profile_user-name"></h1>
         </div>
             <a class="profile_link" href="http://localhost/mypage/get_profile">プロフィールを編集</a>
     </div>

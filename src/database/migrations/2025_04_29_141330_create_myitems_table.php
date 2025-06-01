@@ -35,4 +35,5 @@ class CreateMyitemsTable extends Migration
     {
         Schema::dropIfExists('myitems');
     }
+
 }
