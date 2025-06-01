@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Myitem;
 use App\Models\Item;
+use App\Models\Profile;
 use App\Http\Requests\ExhibitionRequest;
 
 class ItemController extends Controller
@@ -33,18 +34,20 @@ class ItemController extends Controller
         return redirect('/mypage');
     }
 
-    public function edit(){
-        return view('profile_edit');
-    }
-
     public function getDetail(){
-        $myitems = Myitem::all()->find($myitem->id);
-        return view('detail', compact('myitems'));
+        $item = Item::find($item->id);
+        return view('detail', compact('item'));
     }
     
+    public function getProfile(Request $request){
+        $profile = Profile::all();
+        return view('profile_edit', compact('profile'));
+    }
 
-    public function profile(){
-        return view('profile');
+    public function postProfile(Request $request){
+        $profiles = $request -> all();
+        $profile = Profile::create($profiles);
+        return view('profile_edit', compact('profile'));
     }
 
 }

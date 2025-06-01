@@ -8,7 +8,7 @@
 <div class="detail">
     <div class="detail_frame">
         <div class="detail_left">
-            <img class="detail_image" src="" alt="商品画像">
+            <img class="detail_image" src="{{ asset($item->image) }}" alt="商品画像">
         </div>
         <div class="detail_right">
             <div class="detail_purchase_form">
@@ -17,7 +17,7 @@
                     <div class="purchase_head">
                         <div class="head_title">
                             <h1 class="head_title_name">{{$item->name}}</h1>
-                            <p class="head_title_brand-name">{{$item->brand_name}}</p>
+                            <p class="head_title_brand-name">ブランド名</p>
                         </div>
                         <div class="head_content"></div>
                         <p class="head_content_price">
@@ -50,6 +50,7 @@
                     </div>
                 </form>
             </div>
+
             <div class="detail_comment_form">
                 <form class="comment_form" action="">
                     @csrf

@@ -1,75 +1,29 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/profile_edit.css') }}">
+<link rel="stylesheet" href="{{ asset('css/profile.css') }}">
 @endsection
 
 @section('content')
 <div class="profile">
-    <div class="profile_header">
-        <h1 class="profile_header-logo">プロフィール設定</h1>
+    <div class="profile_head">
+        <div class="profile_user">
+            <img src="" alt="画像なし">
+            <h1 class="profile_user-name">ユーザー名</h1>
+        </div>
+            <a class="profile_link" href="http://localhost/mypage/get_profile">プロフィールを編集</a>
     </div>
-    <form class="form" action="">
-        @csrf
-        <div class="form_frame">
-            <div class="form_group">
-                <div class="form_group-img">
-                    <img id="preview">
-                    <input class="form_group-image_input" type="file" name="image" accept="image/png, image/jpeg" value="" onchange="previewFile(this);">
-                </div>
-                <div class="form_error">
-                    <!-- エラー -->
-                </div>
-            </div>
-            <div class="form_group">
-                <p class="form_title">ユーザー名</p>
-                <div class="form_group-content">
-                    <div class="form_group-text">
-                        <input class="form_group-text_input" name="name" type="text">
-                    </div>
-                    <div class="form_error">
-                        <!-- エラー -->
-                    </div>
-                </div>
-            </div>
-            <div class="form_group">
-                <p class="form_title">郵便番号</p>
-                <div class="form_group-content">
-                    <div class="form_group-text">
-                        <input class="form_group-text_input" name="post" type="text">
-                    </div>
-                    <div class="form_error">
-                        <!-- エラー -->
-                    </div>
-                </div>
-            </div>
-            <div class="form_group">
-                <p class="form_title">住所</p>
-                <div class="form_group-content">
-                    <div class="form_group-text">
-                        <input class="form_group-text_input" name="address" type="text">
-                    </div>
-                    <div class="form_error">
-                        <!-- エラー -->
-                    </div>
-                </div>
-            </div>
-            <div class="form_group">
-                <p class="form_title">建物名</p>
-                <div class="form_group-content">
-                    <div class="form_group-text">
-                        <input class="form_group-text_input" name="building" type="text">
-                    </div>
-                    <div class="form_error">
-                        <!-- エラー -->
-                    </div>
-                </div>
-            </div>
+    <div class="main_header">
+        <a class="header_recommend" href="/mypage">出品した商品</a>
+        <a class="header_list" href="">購入した商品</a>
+    </div>
+    <div class="main_items">
+        @foreach ($myitems as $myitem)
+        <div class="items">
+            <img class="items_image" src="{{ asset($myitem->image) }}" alt="画像なし">
+            <p class="items_name">{{$myitem->name}}</p>
         </div>
-        <div class="form_button">
-            <button class="form_button-submit" type="submit">更新する</button>
-        </div>
-    </form>
+        @endforeach
+    </div>
 </div>
-
 @endsection
