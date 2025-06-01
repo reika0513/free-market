@@ -21,7 +21,7 @@
             <div class="header_button">
                 @auth
                 <form class="logout_form" action="/logout" method="post">
-                    @csrf
+                @csrf
                     <button class="button_logout" href="">ログアウト</button>
                 </form>
                 @endauth

@@ -17,7 +17,8 @@ class ItemController extends Controller
 
     public function mypage(){
         $myitems = Myitem::all();
-        return view('profile', compact('myitems'));
+        $profiles = Profile::where('id')->first();
+        return view('profile', compact('myitems', 'profiles'));
     }
 
     public function add(){
@@ -40,14 +41,13 @@ class ItemController extends Controller
     }
     
     public function getProfile(Request $request){
-        $profile = Profile::all();
-        return view('profile_edit', compact('profile'));
+        return view('profile_edit');
     }
 
     public function postProfile(Request $request){
         $profiles = $request -> all();
         $profile = Profile::create($profiles);
-        return view('profile_edit', compact('profile'));
+        return redirect('/');
     }
 
 }
