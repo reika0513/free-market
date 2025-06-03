@@ -1,0 +1,49 @@
+.purchase{
+    width: 1540px;
+}
+
+.purchase_form{
+    width: 1380px;
+    height: 1000px;
+    margin: 80px;
+    display: flex;
+}
+
+.purchase_left{
+    width: 60%;
+}
+
+.purchase_left-top{
+    display: flex;
+}
+
+.purchase_image{
+    width: 177px;
+    height: 177px;
+}
+
+.purchase_title{
+    margin-left: 50px;
+}
+
+.title_price-label{
+    font-size: 20px;
+}
+
+.purchase_name, .title_price{
+    font-size: 30px;
+    margin: 0px;
+}
+
+.pay_select{
+    width: 269px;
+    height: 30px;
+}
+
+.pay_select-option{
+    background-color: #636769;
+    border: solid 1.5px #B1B1B1;
+    color: #EAEAEA;
+    font-size: 14px;
+    border-radius: 5px
+}
