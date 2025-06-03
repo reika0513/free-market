@@ -4,6 +4,7 @@
 
 .detail_frame{
     width: 1380px;
+    height: 1702px;
     display: flex;
 }
 
@@ -16,4 +17,106 @@
     height: 600px;
     margin: 35px 45px;
     border-radius: 4px;
+}
+
+.head_title_name{
+    font-size: 45px;
+    margin-bottom: 0px;
+}
+
+.head_title_brand-name{
+    font-size: 20px;
+    margin: 0px;
+}
+
+.price_label{
+    font-size: 25px;
+}
+
+.head_content_price{
+    font-size: 35px;
+    margin: 10px 0px;
+}
+
+.form_button-submit{
+    width: 570px;
+    height: 58px;
+    font-size: 30px;
+    font-weight: 700;
+    background-color: #FF5555;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+
+.content_title{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content_body-inner{
+    font-size: 24px;
+}
+
+.categories_body-category, .categories_body-quality{
+    display: flex;
+}
+
+.categories_title, .quality_title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content_detail, .content_detail-category{
+    font-size: 20px;
+    margin: 25px 0px 20px 50px;
+}
+
+.content_detail-category{
+    padding: 5px 25px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+}
+
+.comment_header{
+    color: #5F5F5F;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.comment_user{
+    height: 70px;
+    display: flex;
+}
+
+.comment_user-image {
+    height: 70px;
+    width: 70px;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+}
+
+.comment_user-name{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 30px;
+}
+
+.comment_add_content-input{
+    width: 570px;
+    background-color: #E5E5E5;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px 5px;
+}
+
+.comment_title{
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.comment_content_textarea-input{
+    width: 570px;
+    height: 246px;
+    margin-bottom: 50px;
 }

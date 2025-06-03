@@ -15,6 +15,17 @@ class ItemController extends Controller
         return view('index', compact('items'));
     }
 
+    public function getDetail($item_id){
+        $item = Item::find($item_id);
+        return view('detail', compact('item'));
+    }
+    
+    public function postDetail($item_id){
+        $item = Item::find($item_id);
+        return view('   ', compact('item'));
+
+    }
+
     public function mypage(){
         $myitems = Myitem::all();
         $profiles = Profile::where('id')->first();
@@ -35,13 +46,9 @@ class ItemController extends Controller
         return redirect('/mypage');
     }
 
-    public function getDetail(){
-        $item = Item::find($item->id);
-        return view('detail', compact('item'));
-    }
-    
     public function getProfile(Request $request){
-        return view('profile_edit');
+        $profiles=Profile::all();
+        return view('profile_edit', compact('profiles'));
     }
 
     public function postProfile(Request $request){

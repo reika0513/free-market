@@ -23,7 +23,8 @@ Route::get('/add', [ItemController::class, 'add']);
 });
 
 Route::post('/sell', [ItemController::class, 'sell']);
-Route::get('/item/{$item_id}', [ItemController::class, 'getDetail']);
+Route::get('/item/{item_id}', [ItemController::class, 'getDetail']);
+Route::post('/purchase/{item_id}', [ItemController::class, 'postDetail']);
 
 Route::get('/mypage/get_profile', [ItemController::class, 'getProfile']);
 Route::post('/mypage/profile', [ItemController::class, 'postProfile']);
