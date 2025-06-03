@@ -22,7 +22,7 @@ class ItemController extends Controller
     
     public function postDetail($item_id){
         $item = Item::find($item_id);
-        return view('   ', compact('item'));
+        return view('purchase', compact('item'));
 
     }
 

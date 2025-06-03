@@ -46,7 +46,7 @@
                     <div class="form_group-content">
                         <div class="form_group-text">
                             <select class="form_group-text_categories" name="quality">
-                                <option hidden>選択してください</お>
+                                <option hidden>選択してください</option>
                                 <option class="categories_option" name="quality">
                                 <label for="select" value="A">良好</label></option>
                                 <option class="categories_option" name="quality">
