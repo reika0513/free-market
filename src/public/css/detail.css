@@ -3,18 +3,17 @@
 }
 
 .detail_frame{
-    width: 1380px;
+    margin: 15px;
     height: 1702px;
     display: flex;
 }
 
 .detail_left, .detail_right{
-    width: 690px;
+    width: 50%;
 }
 
 .detail_image{
-    width: 600px;
-    height: 600px;
+    width: 80%;
     margin: 35px 45px;
     border-radius: 4px;
 }
@@ -36,6 +35,13 @@
 .head_content_price{
     font-size: 35px;
     margin: 10px 0px;
+}
+
+.icon{
+    display: flex;
+    width: 144px;
+    justify-content: space-between;
+    margin-left: 50px;
 }
 
 .form_button-submit{

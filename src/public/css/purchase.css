@@ -1,25 +1,28 @@
 .purchase{
-    width: 1540px;
+    max-width: 1540px;
 }
 
 .purchase_form{
-    width: 1380px;
-    height: 1000px;
+    height: 800px;
     margin: 80px;
     display: flex;
+    justify-content: space-between;
 }
 
 .purchase_left{
-    width: 60%;
+    width: 70%;
 }
 
 .purchase_left-top{
     display: flex;
+    height: 230px;
+    border-bottom: solid 1px #000000;
 }
 
 .purchase_image{
     width: 177px;
     height: 177px;
+    background-color: #D9D9D9;
 }
 
 .purchase_title{
@@ -35,9 +38,23 @@
     margin: 0px;
 }
 
-.pay_select{
+.purchase_left-middle, .purchase_left-bottom{
+    padding-left: 20px;
+    border-bottom: solid 1px #000000;
+}
+
+.purchase_left-middle{
+    height: 180px;
+}
+
+.purchase_left-bottom{
+    height: 250px;
+}
+
+.pay_select, .address_post, .address_content{
     width: 269px;
     height: 30px;
+    margin: 20px 0px 10px 60px;
 }
 
 .pay_select-option{
@@ -46,4 +63,48 @@
     color: #EAEAEA;
     font-size: 14px;
     border-radius: 5px
+}
+
+.address{
+    display: flex;
+    justify-content: space-between;
+}
+
+.address_link{
+    margin: auto;
+}
+
+.purchase_right{
+    margin-left: 50px;
+}
+
+.purchase_right-content{
+    width: 440px;
+    height: 230px;
+    font-size: 20px;
+    display: flex;
+    border: solid 1px #000000;
+}
+
+.purchase_title-content, .purchase_content{
+    width: 220px;
+}
+
+.purchase_title-price, .purchase_title-pay, .purchase_price, .purchase_pay{
+    padding: 42px 0px;
+    margin: 0px;
+    text-align: center;
+    border-bottom: solid 1px #000000;
+}
+
+.form_button-submit {
+    width: 440px;
+    height: 60px;
+    font-size: 26px;
+    font-weight: 700;
+    background-color: #FF5555;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    margin-top: 50px;
 }

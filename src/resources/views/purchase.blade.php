@@ -32,8 +32,8 @@
                 </div>
                 <div class="purchase_left-bottom">
                     <div class="address">
-                    <h2 class="address_title">配送先</h2>
-                    <a href="/purchase/address/{{$item->id}}"></a>
+                        <h2 class="address_title">配送先</h2>
+                        <a class="address_link" href="/purchase/address/{{$item->id}}">変更する</a>
                     </div>
                     <p class="address_post">
                         <span>〒</span>
@@ -45,15 +45,15 @@
 
             <div class="purchase_right">
                 <div class="purchase_right-content">
-                    <div class="purchase_price">
-                        <p class="purchase_price-title">商品代金</p>
+                    <div class="purchase_title-content">
+                        <p class="purchase_title-price">商品代金</p>
+                        <p class="purchase_title-pay">支払い方法</p>
+                    </div>
+                    <div class="purchase_content">
                         <p class="purchase_price">
                             <span class="purchase_price-label">￥</span>
                             <span class="purchase_price">{{$item->price}}</span>
                         </p>
-                    </div>
-                    <div class="purchase_price">
-                        <p class="purchase_pay-title">支払い方法</p>
                         <p class="purchase_pay">コンビニ払い</p>
                     </div>
                 </div>
