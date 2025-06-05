@@ -26,10 +26,11 @@ class ItemController extends Controller
 
     }
 
+
+
     public function mypage(){
         $myitems = Myitem::all();
-        $profiles = Profile::where('id')->first();
-        return view('profile', compact('myitems', 'profiles'));
+        return view('profile', compact('myitems'));
     }
 
     public function add(){
@@ -44,17 +45,6 @@ class ItemController extends Controller
         var_dump($image_path);
         $myitem->image = basename($image_path);
         return redirect('/mypage');
-    }
-
-    public function getProfile(Request $request){
-        $profiles=Profile::all();
-        return view('profile_edit', compact('profiles'));
-    }
-
-    public function postProfile(Request $request){
-        $profiles = $request -> all();
-        $profile = Profile::create($profiles);
-        return redirect('/');
     }
 
 }
