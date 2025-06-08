@@ -8,7 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class category extends Model
 {
     use HasFactory;
-    protected $fillable=[
-        'name',
-    ];
+    protected $guarded = array('id');
+    public static $rules = array(
+        'myitem_id' => 'required',
+        'category' => 'required',
+    );
+
+    public function getCategory(){
+        return 'ID'.$this->id . ':' . $this->title;
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(ItemCategory::class);
+    }
 }

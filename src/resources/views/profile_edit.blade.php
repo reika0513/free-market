@@ -9,7 +9,7 @@
     <div class="profile_header">
         <h1 class="profile_header-logo">プロフィール設定</h1>
     </div>
-    <form class="form" action="/mypage/profile" method="post">
+    <form class="form" action="/profile/mypage/post_profile" method="post">
         @csrf
         <div class="form_frame">
             <div class="form_group">

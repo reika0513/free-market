@@ -34,6 +34,20 @@
                     <h3 class="form_title">カテゴリー</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
+                            <input type="checkbox" name="category" value="ファッション">ファッション
+                            <input type="checkbox" name="category" value="家電">家電
+                            <input type="checkbox" name="category" value="インテリア">インテリア
+                            <input type="checkbox" name="category" value="レディース">レディース
+                            <input type="checkbox" name="category" value="メンズ">メンズ
+                            <input type="checkbox" name="category" value="コスメ">コスメ
+                            <input type="checkbox" name="category" value="本">本
+                            <input type="checkbox" name="category" value="ゲーム">ゲーム
+                            <input type="checkbox" name="category" value="スポーツ">スポーツ
+                            <input type="checkbox" name="category" value="キッチン">キッチン
+                            <input type="checkbox" name="category" value="ハンドメイド">ハンドメイド
+                            <input type="checkbox" name="category" value="アクセサリー">アクセサリー
+                            <input type="checkbox" name="category" value="おもちゃ">おもちゃ
+                            <input type="checkbox" name="category" value="ベビー・キッズ">ベビー・キッズ
                         <!-- カテゴリーボタン -->
                         </div>
                         <div class="form_error">

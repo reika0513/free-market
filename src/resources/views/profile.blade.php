@@ -11,7 +11,7 @@
             <img src="" alt="画像なし">
             <h1 class="profile_user-name"></h1>
         </div>
-            <a class="profile_link" href="http://localhost/mypage/get_profile">プロフィールを編集</a>
+            <a class="profile_link" href="/profile/mypage/get_profile">プロフィールを編集</a>
     </div>
     <div class="main_header">
         <a class="header_recommend" href="/mypage">出品した商品</a>

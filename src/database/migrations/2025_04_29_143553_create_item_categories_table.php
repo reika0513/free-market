@@ -17,6 +17,7 @@ class CreateItemCategoriesTable extends Migration
             $table->id();
             $table->foreignId('myitem_id');
             $table->foreignId('category_id');
+            $table->string('comment');
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

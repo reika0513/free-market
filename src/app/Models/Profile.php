@@ -7,16 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    protected $guarded = array('id');
-    public static $rules = array(
-        'user_id' => 'required',
-        'name' => 'required',
-        'address' => 'required',
-        'post' => 'required',
-        'building' => 'required',
-    );
+
+    use HasFactory;
+    protected $fillable=[
+        'user_id',
+        'name',
+        'image',
+        'address',
+        'post',
+        'building',
+    ];
 
     public function getProfile(){
         return 'ID'.$this->id . ':' . $this->profile;
+    }
+
+    public function author(){ 
+        return $this->belongsTo(User::class);
     }
 }

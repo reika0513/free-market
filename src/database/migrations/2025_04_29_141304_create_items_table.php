@@ -21,6 +21,7 @@ class CreateItemsTable extends Migration
             $table->text('quality');
             $table->text('content')->nullable();
             $table->integer('price');
+            $table->text('category')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

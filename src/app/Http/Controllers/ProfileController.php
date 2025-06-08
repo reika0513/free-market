@@ -5,23 +5,36 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Profile;
 
+
 class ProfileController extends Controller
 {
     public function mypage(){
-        $myitems = Myitem::all();
-        $profiles = Profile::where('id')->first();
-        return view('profile', compact('myitems', 'profiles'));
+        $profiles = Profile::all();
+        return view('profile', compact('profiles'));
     }
 
-    public function getProfile(Request $request){
-        $profiles=Profile::all();
-        return view('profile_edit', compact('profiles'));
+    public function create(){
+        return view('profile_edit');
     }
 
     public function postProfile(Request $request){
-        $profiles = $request -> all();
-        $profile = Profile::create($profiles);
+        $profile = new Profile;
+        $profile->user_id = $request->user()->id;
+        $profile->name = $request->name;
+        $profile->image = $request->image;
+        $profile->address = $request->address;
+        $profile->post = $request->post;
+        $profile->building = $request->building;
+        $profile->save();
         return redirect('/');
     }
+
+    public function getProfile($user_id){
+        $profile = Profile::find($request->id);
+        return view('profile_edit', compact('profile')); 
+    }
+
+
+
 
 }

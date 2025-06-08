@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,9 +24,13 @@ Route::get('/add', [ItemController::class, 'add']);
 Route::post('/sell', [ItemController::class, 'sell']);
 });
 
-
 Route::get('/item/{item_id}', [ItemController::class, 'getDetail']);
 Route::post('/purchase/{item_id}', [ItemController::class, 'postDetail']);
 
-Route::get('/mypage/get_profile', [ItemController::class, 'getProfile']);
-Route::post('/mypage/profile', [ItemController::class, 'postProfile']);
+
+Route::prefix('profile')->group(function () {
+    Route::get('/mypage', [ProfileController::class, 'mypage']);
+    Route::get('/mypage/create_profile', [ProfileController::class, 'create']);
+    Route::get('/mypage/get_profile', [ProfileController::class, 'getProfile']);
+    Route::post('/mypage/post_profile', [ProfileController::class, 'postProfile']);
+});

@@ -23,9 +23,18 @@
                         <p class="head_content_price">
                             <span class="price_label">￥</span>
                             <span>{{$item->price}}</span>
-                            <span class="price_label">(税込)</span></p>
-                        <p class="star">星1</p>
-                        <p class="comment">コメント2</p>
+                            <span class="price_label">(税込)</span>
+                        </p>
+                        <div class="icon">
+                            <div class="icon_star">
+                                <img class="icon_image" src="" alt="">
+                                <p class="star">星1</p>
+                            </div>
+                            <div class="icon_star">
+                                <img class="icon_image" src="" alt="">
+                                <p class="comment">コメント2</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="form_button">
                         <button class="form_button-submit" type="submit">購入手続きへ</button>
@@ -41,7 +50,7 @@
                         <div class="categories_body">
                             <div class="categories_body-category">
                                 <p class="categories_title">カテゴリー</p>
-                                <p class="content_detail-category">洋服、メンズ</p>
+                                <p class="content_detail-category">{{$item->category}}</p>
                             </div>
                             <div class="categories_body-quality">
                                 <p class="quality_title">商品の状態</p>
