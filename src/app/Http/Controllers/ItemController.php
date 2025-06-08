@@ -22,16 +22,12 @@ class ItemController extends Controller
     
     public function postDetail($item_id){
         $item = Item::find($item_id);
-        return view('purchase', compact('item'));
+        $profiles = Profile::all();
+        return view('purchase', compact('item', 'profiles'));
 
     }
 
 
-
-    public function mypage(){
-        $myitems = Myitem::all();
-        return view('profile', compact('myitems'));
-    }
 
     public function add(){
         return view('sell');
@@ -39,12 +35,38 @@ class ItemController extends Controller
 
     public function sell(ExhibitionRequest $request)
     {
-        $myitems = $request->only('image', 'name','brand_name','quality','content','price');
+        $myitems = $request->all();
         $myitem = Myitem::create($myitems);
-        $image_path = $request->file('image')->store('public/avatar/');
-        var_dump($image_path);
-        $myitem->image = basename($image_path);
         return redirect('/mypage');
+    }
+
+    public function mypage(){
+        $myitems = Myitem::all();
+        $profiles = Profile::all();
+        return view('profile', compact('myitems', 'profiles'));
+    }
+
+
+
+    public function create(){
+        return view('profile_create');
+    }
+
+    public function postProfile(Request $request){
+        $profile = new Profile;
+        $profile->user_id = $request->user()->id;
+        $profile->name = $request->name;
+        $profile->image = $request->image;
+        $profile->address = $request->address;
+        $profile->post = $request->post;
+        $profile->building = $request->building;
+        $profile->save();
+        return redirect('/');
+    }
+
+    public function getProfile(){
+        $profiles = Profile::all();
+        return view('profile_edit', compact('profiles')); 
     }
 
 }

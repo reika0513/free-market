@@ -9,7 +9,7 @@
     <div class="sell_header">
         <h1 class="sell_header-logo">商品の出品</h1>
     </div>
-    <form class="form" action="/sell" method="post" enctype='multipart/form-data'>
+    <form class="form" action="/sell" method="post">
         @csrf
         <div class="form_frame">
             <div class="form_frame-first">
@@ -17,7 +17,7 @@
                     <h3 class="form_title">商品画像</h3>
                     <div class="form_group-content">
                         <div class="form_group-image">
-                            <input class="form_group-image_input" type="file" name="image" accept="image/png, image/jpeg">
+                            <input class="form_group-image_input" type="file" name="image" value="{{old('image')}}" accept="image/png, image/jpeg">
                         </div>
                         <div class="form_error">
                            @error('image')
@@ -59,7 +59,7 @@
                     <h3 class="form_title">商品の状態</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
-                            <select class="form_group-text_categories" name="quality">
+                            <select class="form_group-text_categories" name="quality" value="{{old('quality')}}">   
                                 <option hidden>選択してください</option>
                                 <option class="categories_option" name="quality">
                                 <label for="select" value="A">良好</label></option>
@@ -86,7 +86,7 @@
                     <h3 class="form_title">商品名</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
-                            <input class="form_group-text_input" name="name" type="text">
+                            <input class="form_group-text_input" name="name" value="{{old('name')}}" type="text">
                         </div>
                         <div class="form_error">
                             @error('name')
@@ -99,7 +99,7 @@
                     <h3 class="form_title">ブランド名</h3>
                     <div class="form_group-content">
                         <div class="form_group-text">
-                            <input class="form_group-text_input" name="brand_name" type="text">
+                            <input class="form_group-text_input" name="brand_name" value="{{old('brand_name')}}" type="text">
                         </div>
                         <div class="form_error">
                             @error('brand_name')
@@ -112,7 +112,7 @@
                     <h3 class="form_title">商品の説明</h3>
                     <div class="form_group-content">
                         <div class="form_group-textarea">
-                            <textarea class="form_group-textarea_input" name="content" id="" cols="95" rows="8"></textarea>
+                            <textarea class="form_group-textarea_input" name="content" value="{{old('content')}}" cols="95" rows="8"></textarea>
                         </div>
                         <div class="form_error">
                             @error('content')
@@ -126,7 +126,7 @@
                     <div class="form_group-content">
                         <div class="form_group-text">
                             <span class="price_span">￥</span>
-                            <input class="form_group-text_input-price" name="price" type="text">
+                            <input class="form_group-text_input-price" name="price" value="{{old('price')}}" type="text">
                         </div>
                         <div class="form_error">
                             @error('price')

@@ -16,4 +16,5 @@ class Myitem extends Model
         'content',
         'price',
     ];
+
 }

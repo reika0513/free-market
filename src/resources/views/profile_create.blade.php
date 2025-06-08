@@ -11,12 +11,11 @@
     </div>
     <form class="form" action="/mypage/post_profile" method="post">
         @csrf
-        @foreach ($profiles as $profile)
         <div class="form_frame">
             <div class="form_group">
                 <div class="form_group-img">
                     <img id="preview" class="form_group-image_preview">
-                    <input class="form_group-image_input" type="file" name="image" accept="image/png, image/jpeg" value="{{$profile->image}}" onchange="previewFile(this);">
+                    <input class="form_group-image_input" type="file" name="image" accept="image/png, image/jpeg" onchange="previewFile(this);">
                 </div>
                 <div class="form_error">
                     <!-- エラー -->
@@ -26,7 +25,7 @@
                 <p class="form_title">ユーザー名</p>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_input" name="name" type="text" value="{{$profile->name}}">
+                        <input class="form_group-text_input" name="name" type="text">
                     </div>
                     <div class="form_error">
                         <!-- エラー -->
@@ -37,7 +36,7 @@
                 <p class="form_title">郵便番号</p>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_input" name="post" type="text" value="{{$profile->post}}">
+                        <input class="form_group-text_input" name="post" type="text">
                     </div>
                     <div class="form_error">
                         <!-- エラー -->
@@ -48,7 +47,7 @@
                 <p class="form_title">住所</p>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_input" name="address" type="text" value="{{$profile->address}}">
+                        <input class="form_group-text_input" name="address" type="text">
                     </div>
                     <div class="form_error">
                         <!-- エラー -->
@@ -59,7 +58,7 @@
                 <p class="form_title">建物名</p>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_input" name="building" type="text" value="{{$profile->building}}">
+                        <input class="form_group-text_input" name="building" type="text">
                     </div>
                     <div class="form_error">
                         <!-- エラー -->
@@ -70,9 +69,7 @@
         <div class="form_button">
             <button class="form_button-submit" type="submit">更新する</button>
         </div>
-        @endforeach   
     </form>
-
 </div>
 
 <script>

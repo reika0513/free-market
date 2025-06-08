@@ -35,11 +35,13 @@
                         <h2 class="address_title">配送先</h2>
                         <a class="address_link" href="/purchase/address/{{$item->id}}">変更する</a>
                     </div>
+                    @foreach ($profiles as $profile)
                     <p class="address_post">
                         <span>〒</span>
-                        <span>XXX-YYYY</span>
+                        <span>{{$profile->post}}</span>
                     </p>
-                    <p class="address_content">ここには住所と建物が入ります</p>
+                    <p class="address_content">{{$profile->address}}</p>
+                    @endforeach
                 </div>
             </div>
 

@@ -17,8 +17,4 @@ class Item extends Model
         'price',
     ];
 
-    public function reviews()
-{
-    return $this->belongsToMany(ItemCategory::class)->withPivot('ItemCategory');
-}
 }
