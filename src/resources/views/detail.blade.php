@@ -71,7 +71,7 @@
                             <p class="comment_user-name">admin</p>
                         </div>
                         <div class="comment_add_content">
-                            <p class="comment_add_content-input">ここにコメントが入る</p>
+                            <p class="comment_add_content-input">ここにコメントが入ります</p>
                         </div>
                     </div>
                     <div class="comment_input">

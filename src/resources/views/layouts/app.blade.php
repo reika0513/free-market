@@ -15,9 +15,10 @@
             <a class="header__logo" href="/">
                 COACHTECH
             </a>
-            <div class="header_search">
-                <input class="search_logo" type="text" placeholder="なにをお探しですか？">
-            </div>
+            <form class="header_search" action="/products/search" method="POST">
+            @csrf
+                <input class="search_logo" onchange="this.form.submit()" type="text" placeholder="なにをお探しですか？">
+            </form>
             <div class="header_button">
                 @auth
                 <form class="logout_form" action="/logout" method="post">
