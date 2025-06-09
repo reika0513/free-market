@@ -10,7 +10,6 @@ class category extends Model
     use HasFactory;
     protected $guarded = array('id');
     public static $rules = array(
-        'myitem_id' => 'required',
         'category' => 'required',
     );
 

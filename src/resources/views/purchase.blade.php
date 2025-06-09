@@ -33,7 +33,7 @@
                 <div class="purchase_left-bottom">
                     <div class="address">
                         <h2 class="address_title">配送先</h2>
-                        <a class="address_link" href="/purchase/address/{{$item->id}}">変更する</a>
+                        <a class="address_link" href="/purchase/address">変更する</a>
                     </div>
                     @foreach ($profiles as $profile)
                     <p class="address_post">

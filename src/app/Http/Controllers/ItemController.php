@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Myitem;
 use App\Models\Item;
 use App\Models\Profile;
+use App\Models\Comment;
 use App\Http\Requests\ExhibitionRequest;
+use App\Http\Requests\AddressRequest;
+use App\Http\Requests\CommentRequest;
+
 
 class ItemController extends Controller
 {
@@ -27,7 +31,13 @@ class ItemController extends Controller
 
     }
 
-
+    public function comment(CommentRequest $request){
+        $profile = new Comment;
+        $profile->user_id = $request->user()->id;
+        $profile->comment = $request->comment;
+        $profile->save();
+        return view('detail');
+    }
 
     public function add(){
         return view('sell');
@@ -52,7 +62,11 @@ class ItemController extends Controller
         return view('profile_create');
     }
 
-    public function postProfile(Request $request){
+    public function address(){
+        return view('address');
+    }
+
+    public function postProfile(AddressRequest $request){
         $profile = new Profile;
         $profile->user_id = $request->user()->id;
         $profile->name = $request->name;

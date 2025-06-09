@@ -19,7 +19,9 @@
                     <input class="form_group-image_input" type="file" name="image" accept="image/png, image/jpeg" value="{{$profile->image}}" onchange="previewFile(this);">
                 </div>
                 <div class="form_error">
-                    <!-- エラー -->
+                    @error('image')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
             <div class="form_group">
@@ -29,7 +31,9 @@
                         <input class="form_group-text_input" name="name" type="text" value="{{$profile->name}}">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('name')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -40,7 +44,9 @@
                         <input class="form_group-text_input" name="post" type="text" value="{{$profile->post}}">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('post')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -51,7 +57,9 @@
                         <input class="form_group-text_input" name="address" type="text" value="{{$profile->address}}">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('address')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -62,7 +70,9 @@
                         <input class="form_group-text_input" name="building" type="text" value="{{$profile->building}}">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('building')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>

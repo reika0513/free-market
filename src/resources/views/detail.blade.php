@@ -62,26 +62,28 @@
             </div>
 
             <div class="detail_comment_form">
-                <form class="comment_form" action="">
+                <form class="comment_form" action="/comment" method="post">
                     @csrf
-                    <h3 class="comment_header">コメント(1)</h3>
+                    <h3 class="comment_header">コメント</h3>
                     <div class="comment_add">
                         <div class="comment_user">
                             <img class="comment_user-image" src="" alt="">
                             <p class="comment_user-name">admin</p>
                         </div>
                         <div class="comment_add_content">
-                            <p class="comment_add_content-input">こちらにコメントが入ります。</p>
+                            <p class="comment_add_content-input">ここにコメントが入る</p>
                         </div>
                     </div>
                     <div class="comment_input">
                         <h4 class="comment_title">商品へコメント</h4>
                         <div class="comment_content">
                             <div class="comment_content_textarea">
-                                <textarea class="comment_content_textarea-input" name="content" id="" cols="50" rows="5"></textarea>
+                                <textarea class="comment_content_textarea-input" name="comment" id="" cols="50" rows="5"></textarea>
                             </div>
                             <div class="form_error">
-                                <!-- エラー -->
+                                @error('comment')
+                                {{ $message }}
+                                @enderror
                             </div>
                         </div>
                     </div>

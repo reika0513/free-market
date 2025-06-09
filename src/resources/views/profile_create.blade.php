@@ -18,7 +18,9 @@
                     <input class="form_group-image_input" type="file" name="image" accept="image/png, image/jpeg" onchange="previewFile(this);">
                 </div>
                 <div class="form_error">
-                    <!-- エラー -->
+                    @error('image')
+                    {{ $message }}
+                    @enderror
                 </div>
             </div>
             <div class="form_group">
@@ -28,7 +30,9 @@
                         <input class="form_group-text_input" name="name" type="text">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('name')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -39,7 +43,9 @@
                         <input class="form_group-text_input" name="post" type="text">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('post')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -50,7 +56,9 @@
                         <input class="form_group-text_input" name="address" type="text">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('address')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -61,7 +69,9 @@
                         <input class="form_group-text_input" name="building" type="text">
                     </div>
                     <div class="form_error">
-                        <!-- エラー -->
+                        @error('building')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
