@@ -44,7 +44,7 @@ php artisan db:seed
 * nginx 1.21.1
 
 ## ER図
-![alt](market.png)
+
 
 ## URL
 * 開発環境　[http://localhost/]
